@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`547176e`](https://github.com/stdlib-js/stdlib/commit/547176ec139fa4257ee56a3be0597255049fbc12) - **test:** fix grammar in test descriptions _(by Athan Reines)_
 -   [`9c31305`](https://github.com/stdlib-js/stdlib/commit/9c31305739ee5411d758efbe4ac7de92ae3e939b) - **test:** fix grammar in test descriptions _(by Athan Reines)_
 -   [`3ceff10`](https://github.com/stdlib-js/stdlib/commit/3ceff1079fa63d0c89b3229333670e030d1209e5) - **refactor:** avoid unnecessary assignment _(by Athan Reines)_
 -   [`041cda0`](https://github.com/stdlib-js/stdlib/commit/041cda0c07550e530ad445b3f5612adea9bcc2d2) - **bench:** refactor to use string interpolation in blas/ext/base/glast-index-of [(#10817)](https://github.com/stdlib-js/stdlib/pull/10817) _(by Kamal Singh Rautela)_
