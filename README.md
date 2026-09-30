@@ -88,7 +88,7 @@ The function has the following parameters:
 
 -   **N**: number of indexed elements.
 -   **searchElement**: search element.
--   **x**: input array.
+-   **x**: input [`Array`][mdn-array] or [`typed array`][mdn-typed-array].
 -   **strideX**: stride length.
 
 If the function is unable to find a search element, the function returns `-1`.
@@ -140,7 +140,7 @@ The function has the following additional parameters:
 
 -   **offsetX**: starting index.
 
-While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying buffer, the offset parameter supports indexing semantics based on a starting index. For example, to access only the last three elements of the strided array
+While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying buffer, the offset parameter supports indexing semantics based on a starting index. For example, to access only the last three elements of the strided array:
 
 ```javascript
 var x = [ -2.0, 1.0, 0.0, -5.0, 4.0, 3.0, 3.0, -1.0 ];
@@ -159,7 +159,8 @@ var idx = glastIndexOf.ndarray( 3, 3.0, x, 1, x.length-3 );
 
 ## Notes
 
--   When searching for a search element, the function checks for equality using the strict equality operator `===`. As a consequence, `NaN` values are considered distinct, and `-0` and `+0` are considered the same.
+-   If `N <= 0`, both functions return `-1`.
+-   When searching for a search element, the functions check for equality using the strict equality operator `===`. As a consequence, `NaN` values are considered distinct, and `-0` and `+0` are considered the same.
 -   Both functions support array-like objects having getter and setter accessors for array element access (e.g., [`@stdlib/array-base/accessor`][@stdlib/array/base/accessor]).
 
 </section>
@@ -278,6 +279,8 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [branches-url]: https://github.com/stdlib-js/blas-ext-base-glast-index-of/blob/main/branches.md
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/blas-ext-base-glast-index-of/main/LICENSE
+
+[mdn-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
